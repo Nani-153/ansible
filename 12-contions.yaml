@@ -2,11 +2,11 @@
   hosts: local
   connection: local
   vars_prompt:
-  - name: my_number
+  - name: my_number  #generally my_number value taken as string in prompt,so we use filter ( int )
     prompt: Please enter the number
     private: false # not confidential
   # vars:
-  #   my_number: 139 # number
+  #   my_number: 139   # number 
   tasks:
   - name: print this if less than 10
     ansible.builtin.debug:
